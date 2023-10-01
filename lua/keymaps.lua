@@ -1,7 +1,7 @@
 -- Selecting entire lines
 vim.keymap.set('n', 'x', [[:<C-u>execute 'normal! ' .. v:count .. 'V'<CR>]],
   { silent = true })
-vim.keymap.set('n', 'X', [[:<C-u>execute 'normal! ' .. v:count .. 'V'<CR>]],
+vim.keymap.set('n', 'X', [[:<C-u>execute 'normal! V' .. (v:count-1) .. 'k'<CR>]],
   { silent = true })
 -- Lowercase `x` to extend selection to line below
 vim.keymap.set('v', 'x', 'j', { silent = true })
