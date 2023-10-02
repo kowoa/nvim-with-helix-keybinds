@@ -143,14 +143,6 @@ require('lazy').setup({
   },
 
   {
-    'rebelot/kanagawa.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'kanagawa'
-    end,
-  },
-
-  {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
