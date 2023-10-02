@@ -156,15 +156,6 @@ require('lazy').setup({
     },
   },
 
-  {
-    -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help indent_blankline.txt`
-    main = "ibl",
-    opts = {},
-  },
-
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
@@ -342,12 +333,12 @@ require('nvim-treesitter.configs').setup {
       lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
       keymaps = {
         -- You can use the capture groups defined in textobjects.scm
-        ['aa'] = '@parameter.outer',
-        ['ia'] = '@parameter.inner',
-        ['af'] = '@function.outer',
-        ['if'] = '@function.inner',
-        ['ac'] = '@class.outer',
-        ['ic'] = '@class.inner',
+        ['<leader>aa'] = '@parameter.outer',
+        ['<leader>ia'] = '@parameter.inner',
+        ['<leader>af'] = '@function.outer',
+        ['<leader>if'] = '@function.inner',
+        ['<leader>ac'] = '@class.outer',
+        ['<leader>ic'] = '@class.inner',
       },
     },
     move = {

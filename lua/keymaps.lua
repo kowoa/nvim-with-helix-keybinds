@@ -8,6 +8,12 @@ vim.keymap.set('v', 'x', 'j', { silent = true })
 -- Uppercase `X` to extend selection to line above
 vim.keymap.set('v', 'X', 'oko', { silent = true })
 
+-- Enter insert mode
+vim.keymap.set('v', 'i', 'vi', { nowait = true, noremap = true, silent = true })
+vim.keymap.set('v', 'a', 'va', { nowait = true, noremap = true, silent = true })
+vim.keymap.set('v', 'I', '<esc>`<i', { nowait = true, noremap = true, silent = true })
+vim.keymap.set('v', 'A', '<esc>`>a', { nowait = true, noremap = true, silent = true })
+
 -- Toggle visual mode
 vim.keymap.set({ 'n', 'v' }, ';', 'v', { silent = true })
 
