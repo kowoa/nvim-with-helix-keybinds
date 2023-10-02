@@ -1,12 +1,12 @@
 -- Selecting entire lines
-vim.keymap.set('n', 'x', [[:<C-u>execute 'normal! V' .. (v:count-1) .. 'j'<CR>]],
+vim.keymap.set('n', 'x', [[:<C-u>execute (v:count>1 ? 'normal! V' .. (v:count-1) .. 'j' : 'normal! V')<CR>]],
   { silent = true })
-vim.keymap.set('n', 'X', [[:<C-u>execute (v:count>1 ? 'normal! Vo' .. (v:count-1) .. 'ko' : 'normal! V')<CR>]],
+vim.keymap.set('n', 'X', [[:<C-u>execute (v:count>1 ? 'normal! V' .. (v:count-1) .. 'k' : 'normal! V')<CR>]],
   { silent = true })
 -- Lowercase `x` to extend selection to line below
-vim.keymap.set('v', 'x', 'j', { silent = true })
+vim.keymap.set('v', 'x', '<esc>`>jV`<o', { silent = true })
 -- Uppercase `X` to extend selection to line above
-vim.keymap.set('v', 'X', 'oko', { silent = true })
+vim.keymap.set('v', 'X', '<esc>`<kV`>o', { silent = true })
 
 -- Enter insert mode
 vim.keymap.set('v', 'i', 'vi', { nowait = true, noremap = true, silent = true })
