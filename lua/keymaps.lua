@@ -73,7 +73,7 @@ vim.keymap.set('n', 'gp', '<cmd>bp<cr>', { silent = true })
 vim.keymap.set('n', '%', 'ggvG$', { silent = true })
 
 -- Find and replace inside selection
-vim.keymap.set('v', 's', [[:s/]])
+vim.keymap.set('v', '/', [[:s/]])
 
 -- Yank to system clipboard
 vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
