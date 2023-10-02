@@ -1,16 +1,15 @@
 -- Selecting entire lines
-vim.keymap.set('n', 'x', [[:<C-u>execute 'normal! ' .. v:count .. 'V'<CR>]],
+vim.keymap.set('n', 'x', [[:<C-u>execute 'normal! V' .. (v:count-1) .. 'j'<CR>]],
   { silent = true })
-vim.keymap.set('n', 'X', [[:<C-u>execute 'normal! V' .. (v:count-1) .. 'k'<CR>]],
+vim.keymap.set('n', 'X', [[:<C-u>execute (v:count>1 ? 'normal! Vo' .. (v:count-1) .. 'ko' : 'normal! V')<CR>]],
   { silent = true })
 -- Lowercase `x` to extend selection to line below
 vim.keymap.set('v', 'x', 'j', { silent = true })
 -- Uppercase `X` to extend selection to line above
 vim.keymap.set('v', 'X', 'oko', { silent = true })
 
--- Semicolon toggles between normal and visual mode
-vim.keymap.set('n', ';', 'v', { silent = true })
-vim.keymap.set('v', ';', 'v', { silent = true })
+-- Toggle visual mode
+vim.keymap.set({ 'n', 'v' }, ';', 'v', { silent = true })
 
 -- Flip cursor position inside selection
 vim.keymap.set('v', '<A-;>', 'o', { silent = true })
@@ -52,6 +51,14 @@ vim.keymap.set('n', 'T', 'vT', { silent = true })
 vim.keymap.set('n', '{', 'V{', { silent = true })
 vim.keymap.set('n', '}', 'V}', { silent = true })
 
+-- Goto mode
+vim.keymap.set('n', 'gh', 'v0', { silent = true })
+vim.keymap.set('n', 'gs', 'v^', { silent = true })
+vim.keymap.set('n', 'gl', 'v$', { silent = true })
+vim.keymap.set({ 'n', 'v' }, 'ge', 'G', { silent = true })
+vim.keymap.set('v', 'gh', '0', { silent = true })
+vim.keymap.set('v', 'gs', '^', { silent = true })
+vim.keymap.set('v', 'gl', '$', { silent = true })
 -- Buffer navigation
 vim.keymap.set('n', 'gn', '<cmd>bn<cr>', { silent = true })
 vim.keymap.set('n', 'gp', '<cmd>bp<cr>', { silent = true })
