@@ -86,9 +86,3 @@ vim.keymap.set({ 'n', 'v' }, '<leader>p', [["+p]])
 -- Match mode (See mini.surround plugin for more keymaps)
 vim.keymap.set('n', 'mi', 'vi', { desc = "Select matching inside" });
 vim.keymap.set('n', 'ma', 'va', { desc = "Select matching around" });
-
--- Budget multicursor
-vim.keymap.set('n', 'C', '<C-v>j')
-vim.keymap.set('n', '<A-C>', '<C-v>k')
-vim.keymap.set('v', 'C', 'j')
-vim.keymap.set('v', '<A-C>', 'k')
