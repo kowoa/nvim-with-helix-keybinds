@@ -40,8 +40,11 @@ EOF<cr>]], { noremap = true, silent = true })
 vim.keymap.set('n', 'cc', 's', { silent = true })
 
 -- Always enter visual mode before navigating
-vim.keymap.set('n', 'w', 'vw', { silent = true })
-vim.keymap.set('n', 'W', 'vW', { silent = true })
+-- Modified `w` to be more similar to Helix
+vim.keymap.set('n', 'w', 'vel', { silent = true })
+vim.keymap.set('n', 'W', 'vEl', { silent = true })
+vim.keymap.set('v', 'w', 'el', { silent = true })
+vim.keymap.set('v', 'W', 'El', { silent = true })
 vim.keymap.set('n', 'b', 'vb', { silent = true })
 vim.keymap.set('n', 'B', 'vB', { silent = true })
 vim.keymap.set('n', 'e', 've', { silent = true })
@@ -83,3 +86,9 @@ vim.keymap.set({ 'n', 'v' }, '<leader>p', [["+p]])
 -- Match mode (See mini.surround plugin for more keymaps)
 vim.keymap.set('n', 'mi', 'vi', { desc = "Select matching inside" });
 vim.keymap.set('n', 'ma', 'va', { desc = "Select matching around" });
+
+-- Budget multicursor
+vim.keymap.set('n', 'C', '<C-v>j')
+vim.keymap.set('n', '<A-C>', '<C-v>k')
+vim.keymap.set('v', 'C', 'j')
+vim.keymap.set('v', '<A-C>', 'k')
