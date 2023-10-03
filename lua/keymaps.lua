@@ -41,10 +41,10 @@ vim.keymap.set('n', 'cc', 's', { silent = true })
 
 -- Always enter visual mode before navigating
 -- Modified `w` to be more similar to Helix
-vim.keymap.set('n', 'w', 'vel', { silent = true })
-vim.keymap.set('n', 'W', 'vEl', { silent = true })
-vim.keymap.set('v', 'w', 'el', { silent = true })
-vim.keymap.set('v', 'W', 'El', { silent = true })
+vim.keymap.set('n', 'w', 'vlwh', { silent = true })
+vim.keymap.set('n', 'W', 'vlWh', { silent = true })
+vim.keymap.set('v', 'w', 'lwh', { silent = true })
+vim.keymap.set('v', 'W', 'lWh', { silent = true })
 vim.keymap.set('n', 'b', 'vb', { silent = true })
 vim.keymap.set('n', 'B', 'vB', { silent = true })
 vim.keymap.set('n', 'e', 've', { silent = true })
