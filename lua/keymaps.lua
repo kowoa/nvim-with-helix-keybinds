@@ -22,6 +22,7 @@ vim.keymap.set('v', '<A-;>', 'o', { silent = true })
 
 -- Repeat last action
 vim.keymap.set({ 'n', 'v' }, '<A-.>', ';', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<A-,>', ',', { silent = true })
 
 -- Add new lines
 vim.keymap.set('v', 'o', '<esc>o', { silent = true })
