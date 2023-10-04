@@ -87,3 +87,6 @@ vim.keymap.set({ 'n', 'v' }, '<leader>p', [["+p]])
 -- Match mode (See mini.surround plugin for more keymaps)
 vim.keymap.set('n', 'mi', 'vi', { desc = "Select matching inside" });
 vim.keymap.set('n', 'ma', 'va', { desc = "Select matching around" });
+
+-- Redo similar to Helix
+vim.keymap.set({ 'n', 'v' }, 'U', '<C-r>')
